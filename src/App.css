@@ -257,3 +257,49 @@ button:hover{
   font-size: 10rem;
   color:rgba(98, 191, 207, 0.9);
 }
+
+.img1_normal{
+  filter: grayscale(100%);
+  width: 250px;
+  height: 250px;
+  border-radius: 0%;
+  transition: .3s;
+}
+
+.img1_color{
+  filter: grayscale(0);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+.mainPrueba .boton_normal{
+  padding: 8px 14px;
+  border:none;
+  border-radius: 0.5em;
+  color:white;
+  background-color: rgba(141, 195, 206, 0.87);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin:0 8px;
+}
+
+.mainPrueba .boton_color{
+  padding: 8px 14px;
+  border:none;
+  border-radius: 0.5em;
+  color:white;
+  background-color: rgba(0, 0, 0, 0.836);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin:0 8px;
+}
+
+.mainPrueba{
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

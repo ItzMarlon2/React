@@ -11,6 +11,7 @@ import { AboutUs } from './components/pages/AboutUs/AboutUs'
 import { Contact } from './components/pages/Contact/Contact'
 import { PageNot } from './components/pages/PageNot/PageNot';
 import { Contador } from './components/pages/Contador/Contador';
+import { Prueba } from './components/pages/Prueba/Prueba';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/AboutUs' element={<AboutUs/>}/>
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='/Contador' element={<Contador/>}/>
+        <Route path='/Prueba' element={<Prueba/>}/>
         <Route path="*" element={<PageNot/>}/>
       </Routes>
     </BrowserRouter>
