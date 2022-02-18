@@ -1,38 +1,259 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root{
+  width: 100vw;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.body{
+  background-color: rgba(0, 0, 0, 0.836);
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.botones{
+  width: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header{
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.main .img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 500px;
+}
+
+.main img{
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.footer{
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  padding: 8px 14px;
+  border:none;
+  border-radius: 0.5em;
+  color:white;
+  background-color: rgba(141, 195, 206, 0.87);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin:0 8px;
+}
+
+button:hover{
+  background-color: rgba(98, 191, 207, 0.9);
+
+}
+
+.main img:hover{
+  width: 400px;
+  height: 400px;
+  box-shadow: 3px 3px 20px rgb(207, 207, 207);
+}
+
+.formContact{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 20rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgb(207, 207, 207);
+}
+
+.txt_field{
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.txt_field input{
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  width: 100%;
+  height: 40px;
+}
+
+
+.txt_field textarea{
+  border: 1px solid #7a7a7a;
+  outline: none;
+  transition: all 200ms ease;
+}
+
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  transition: .5s;
+}
+
+.txt_field span::before{
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgba(98, 191, 207, 0.9);
+  transition: .5s;
+}
+
+.txt_field input:focus ~ label{
+  top: -4px;
+  color: rgba(98, 191, 207, 0.9);
+}
+
+.txt_field input:focus ~ span::before{
+  width: 100%;
+}
+
+.labelForm{
+  margin: 0.1rem 0 0.1rem 0;
+}
+
+.divbtn{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.mainContador{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mainContador .contador{
+  font-size: 10rem;
+  color:white;
+}
+
+.contenedor-botones{
+  margin-top: 50px;
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contenedor-botones button{
+  width: 80px;
+}
+
+.hr_normal{
+  width: 25%;
+  border:none;
+  border:1px solid #7a7a7a;
+}
+/*ESTILOS PARA LA PÁGINA DEL PAGE NOT FOUND*/
+.page-not{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-page{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-page p{
+  margin: 0;
+  font-weight: bold;
+  font-size: 80px;
+}
+
+.contenedor-texto{
+  display: flex;
+  flex-direction: column;
+}
+
+.texto2{
+  color: #03A9F5;
+}
+
+ .parrafo {
+  margin: 0;
+  font-size: 80px;
+} 
+
+
+
+.img_normal{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateY(20px);
+  transition: .2s;
+}
+
+.img_color{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: translateY(-20px);
+  transition: .2s;  
+}
+
+.mainContador .img{
+  width: 200px;
+  height: 200px;
+}
+
+.mainContenedor .hr_normal{
+  width: 25%;
+  border:none;
+  border:1px solid #7a7a7a;
+}
+
+.hr_color{
+  width: 25%; 
+  border:none;
+  border:1px solid rgba(98, 191, 207, 0.9);
+}
+
+.contador_color{
+  font-size: 10rem;
+  color:rgba(98, 191, 207, 0.9);
 }
