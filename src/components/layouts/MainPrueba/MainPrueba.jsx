@@ -29,6 +29,7 @@ export const MainPrueba = () => {
             boton.classList.add('boton_color')
             boton.textContent="Activado"
         }else{
+            
             img1.classList.add('img1_normal')
             img1.classList.remove('img1_color')
             img2.classList.add('img1_normal')
