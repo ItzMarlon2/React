@@ -132,12 +132,14 @@ button:hover{
   transition: .5s;
 }
 
-.txt_field input:focus ~ label{
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
   top: -4px;
   color: rgba(98, 191, 207, 0.9);
 }
 
-.txt_field input:focus ~ span::before{
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
   width: 100%;
 }
 
@@ -150,6 +152,29 @@ button:hover{
   justify-content: center;
   margin-top: 1rem;
 }
+
+input[type=submit]{
+  padding: 8px 14px;
+  border:none;
+  outline: none;
+  border-radius: 0.5em;
+  color:white;
+  background-color: rgba(141, 195, 206, 0.87);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin:0 8px;
+}
+
+.alerta{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.alerta p{
+  text-align: center;
+  color: black;
+}
+
 
 .mainContador{
   width: 100%;

@@ -26,7 +26,9 @@ export const Formulario = () => {
         [e.target.name]: e.target.value
       }
     })
+    
   }
+  
 
   const manejadorBoton=()=>{
     let url="https://backend-edw.herokuapp.com/login"
@@ -34,7 +36,7 @@ export const Formulario = () => {
     .then(response => {
       console.log(response);
         if(response.data.status === "ok"){
-          
+
         }else{
           setState({
             error:true,
@@ -50,19 +52,19 @@ export const Formulario = () => {
     })
   }
 
+
   return (
     <form className='formContact' onSubmit={manejadorSubmit}>
         <div className='txt_field'>
-          <input type="text" id="email" name="username" onChange={manejadorChange}/>
-          <label className='labelForm'for="email">Email</label>
+          <input type="text" id="email" name="username" required onChange={manejadorChange}/>
+          <label className='labelForm'for="email">Nombre de usuario</label>
           <span></span>
         </div>
         <div className='txt_field'>
-          <input type="password" id="password" autoComplete='off' name="password" onChange={manejadorChange}/>
-          <label className='labelForm' for="password">contraseña</label>
+          <input type="password" id="password" autoComplete='off' name="password" required onChange={manejadorChange}/>
+          <label className='labelForm' for="password">Contraseña</label>
           <span></span>
         </div>
-        
         <div className='divbtn'>
           <input type="submit" value="Iniciar sesión" onClick={manejadorBoton}/>
           {/* <button className='btnSubmit'>Iniciar sesión</button> */}
